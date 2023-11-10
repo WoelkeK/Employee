@@ -22,7 +22,7 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
-    @GetMapping("/list")
+    @GetMapping
     public String getListOfEmployees(Model model) {
 
         List<Employee> employees = employeeService.getEmployees();
