@@ -159,7 +159,7 @@
                 </div>
                 <nav class="mt-5 flex-1 space-y-1 px-2">
                     <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    <a href="http://10.0.1.15:8881/notifications"
+                    <a href="/employees"
                        class="bg-gray-900 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
                         <!--
                           Heroicon name: outline/home
@@ -321,7 +321,7 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <form class="form-inline" th:action="@{/info/search/name}">
+                                        <form class="form-inline" th:action="@{employees/search}">
                                             <div class="input-group">
                                                 <input type="text" class="form-control" name="employeeName"/>
                                                 <span class="input-group-btn">
