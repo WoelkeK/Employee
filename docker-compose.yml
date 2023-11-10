@@ -1,0 +1,40 @@
+version: "3.7"
+services:
+  employee_service:
+    build: .
+    #       dockerfile: Dockerfile
+    #    image: carreg_api_service:latest
+    restart: always
+    ports:
+      - "8883:8080"
+    networks:
+      database: {}
+
+networks:
+  database:
+    external: true
+
+#-------------------------------------------
+#Previous single app config
+
+#  mysql_db_service:
+#    image: mysql:latest
+#    restart: always
+#    ports:
+#      - "3307:3306"
+#    environment:
+#      MYSQL_DATABASE: carreg_db
+#      MYSQL_ROOT_PASSWORD: root
+##      MYSQL_USER: root
+#      MYSQL_PASSWORD: root
+#      MYSQL_ALLOW_EMPTY_PASSWORD: true
+#
+#  carreg_api_service:
+#    build: .
+#    restart: always
+#    ports:
+#      - "8881:8080"
+#    depends_on:
+#      - mysql_db_service
+#    links:
+#      - mysql_db_service
